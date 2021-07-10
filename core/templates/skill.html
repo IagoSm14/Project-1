@@ -1,0 +1,31 @@
+{% load static %}
+
+<section id="skills" class="skills">
+				<div class="skill-content">
+					<div class="section-heading text-center">
+						<h2>skills</h2>
+					</div>
+					<div class="container">
+						<div class="row">
+							{% for s in skill %}
+							<div class="col-md-6">
+								<div class="single-skill-content">
+									<div class="barWrapper">
+										<span class="progressText">{{s.habilidade}}</span>
+										<div class="single-progress-txt">
+											<div class="progress ">
+												<div class="progress-bar" role="progressbar" aria-valuenow="{{s.nivel}}" aria-valuemin="10" aria-valuemax="100" style="">
+
+												</div>
+											</div>
+											<h3>{{s.nivel}}%</h3>
+										</div>
+									</div><!-- /.barWrapper -->
+								</div>
+							</div>
+							{% endfor %}
+						</div><!-- /.row -->
+					</div>	<!-- /.container -->
+				</div><!-- /.skill-content-->
+
+</section><!--/.skills-->
